@@ -28,14 +28,34 @@
 
 ---
 
+## ⚠️ IMPORTANT DISCLAIMER & WARNINGS
+
+> **Please read this section carefully before proceeding.**
+
+| 🚨 Risk | Description |
+|---------|-------------|
+| **Terms of Service** | This tool extracts data from WhatsApp Web's internal storage (IndexedDB). This is **NOT** an official WhatsApp/Meta feature. Using it may violate WhatsApp's Terms of Service. |
+| **Account Safety** | WhatsApp may detect unusual activity and restrict or permanently ban your account. Use this at your **own risk**. |
+| **No Guarantees** | This script relies on WhatsApp Web's internal structure, which changes frequently. It may stop working without notice. |
+| **Educational Purpose** | This repository is intended for educational purposes and for developers who need Channel JIDs for legitimate automation (e.g., Baileys library). |
+| **Data Privacy** | The script runs entirely in your browser. No data is sent to any external server. However, always review code before pasting it into your browser console. |
+
+**By using this tool, you acknowledge that you understand these risks and accept full responsibility for any consequences.**
+
+---
+
+
 
 ## 🚀 Quick Overview
 
 This repository provides a **single JavaScript snippet** that you can run directly in your browser's Developer Console to extract all **WhatsApp Channel Newsletter JIDs** from WhatsApp Web's IndexedDB storage.
 
 > ⚡ **No external software required on PC** — just your browser's built-in DevTools!
+> 💡 **Why this exists:** If you're using [Baileys](https://github.com/WhiskeySockets/Baileys) or other WhatsApp automation libraries, you need the Channel JID (e.g., `1234567890123456789@newsletter`) to interact with channels programmatically. WhatsApp Web does **not** expose this ID in the UI. This tool fills that gap.
+
 
 ---
+
 
 ## 📋 Prerequisites
 
@@ -164,6 +184,8 @@ This repository provides a **single JavaScript snippet** that you can run direct
 
 Copy and paste this into your browser console (PC or Kiwi Browser mobile):
 put the exact name of your channel in script where it says "YOUR_CHANNEL_NAME_HERR"
+
+> 🔔 **Tip:** If the button doesn't work, manually select and copy the code from the block below:
 ```javascript
 (async () => {
     const db = await new Promise((resolve, reject) => {
@@ -363,13 +385,67 @@ name.toLowerCase().includes("yourname")
 
 ---
 
-## 🤝 Contributing
+## ❓ FAQ
 
-Contributions are welcome! Feel free to:
+<details>
+<summary><b>Is this safe to use?</b></summary>
+<br>
+The script only reads from your browser's local IndexedDB and does not send data anywhere. However, using it may violate WhatsApp's Terms of Service. Use at your own risk. See the <a href="#-important-disclaimer--warnings">Disclaimer</a> section above.
+</details>
 
-- 🐛 Report bugs via [Issues](../../issues)
-- 💡 Suggest new features
-- 🔧 Submit pull requests
+<details>
+<summary><b>Why do I need the Channel JID?</b></summary>
+<br>
+WhatsApp automation libraries like <a href="https://github.com/WhiskeySockets/Baileys">Baileys</a> require the JID (e.g., <code>123456789@newsletter</code>) to send messages to or interact with channels programmatically. WhatsApp Web does not display this ID in the user interface.
+</details>
+
+<details>
+<summary><b>The script isn't finding any JIDs. What's wrong?</b></summary>
+<br>
+Make sure:
+<ol>
+  <li>You are logged into WhatsApp Web</li>
+  <li>You have clicked on at least one channel (so it's loaded in memory)</li>
+  <li>You are using a modern browser with IndexedDB support</li>
+  <li>WhatsApp Web hasn't updated their internal structure (the script may need updating)</li>
+</ol>
+</details>
+
+<details>
+<summary><b>Will this work on iPhone/iOS?</b></summary>
+<br>
+Unfortunately, iOS browsers (including Safari and Chrome) do not provide Developer Tools / Console access. This tool requires a browser with DevTools support. On mobile, only Android with Kiwi Browser is supported.
+</details>
+
+<details>
+<summary><b>Can WhatsApp ban my account for using this?</b></summary>
+<br>
+Possibly. This is an unofficial method that accesses WhatsApp Web's internal data. While the script itself is read-only, WhatsApp's anti-spam systems may flag unusual behavior. We recommend using this on a secondary/test account rather than your primary number.
+</details>
+
+---
+
+## 🤝 Support & Contact
+
+Need help? Found a bug? Want to suggest a feature? Reach out!
+
+<p align="center">
+  <a href="https://wa.me/923257853673">
+    <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp">
+  </a>
+  <a href="https://t.me/M347ab">
+    <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram">
+  </a>
+  <a href="https://instagram.com/m347ab">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://wa.me/923257853673">📱 WhatsApp: +92 325 7853673</a> • 
+  <a href="https://t.me/M347ab">✈️ Telegram: @M347ab</a> • 
+  <a href="https://instagram.com/m347ab">📸 Instagram: @m347ab</a>
+</p>
 
 ---
 
@@ -377,16 +453,16 @@ Contributions are welcome! Feel free to:
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
+> ⚠️ **Note:** The MIT License covers the code in this repository. It does not grant permission to violate WhatsApp's Terms of Service. Users are responsible for ensuring their use case complies with all applicable laws and platform policies.
+
 ---
 
 <div align="center">
 
-### Made with 💚 for the WhatsApp Community
+### ⭐ Star this repo if it helped you!
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=yourusername&label=Repository%20Views&color=25D366&style=flat-square" alt="Profile Views">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=18&pause=1000&color=FFD700&center=true&vCenter=true&width=400&lines=Happy+Coding!;Built+with+❤️+by+Mehtab" alt="Footer Typing SVG" />
 </p>
-
-**⭐ Star this repo if it helped you!**
 
 </div>
