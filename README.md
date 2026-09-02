@@ -270,6 +270,7 @@ Download **"Devil Browser: Web Inspector"** from your app store:
 Copy and paste this entire block into your browser console:
 
 ```javascript
+
 (async () => {
   const dbs = await window.indexedDB.databases();
   const channels = new Map();
